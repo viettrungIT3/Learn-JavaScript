@@ -38,3 +38,5 @@ function makeQuocte() {
     eleQuocte.innerText = quocte.quocte;
     eleAuthor.innerText = quocte.author;
 }
+
+window.onload = makeQuocte;
