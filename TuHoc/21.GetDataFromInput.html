@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lấy dữ liệu từ input</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" value="Name" id="name">
+        <input type="number" value="18" id="age" min = 1>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="submit" value="Submit" onclick="onClick(); event.preventDefault()">
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function onClick() {
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let gender = document.getElementById('gender').value;
+            
+            let result = document.getElementById('result');
+    
+            result.innerHTML = '<p>Name: ' + name + '</p>'
+                + '<p>Age: ' + age + '</p>'
+                + '<p>Gender: ' + gender + '</p>'
+        }
+
+    </script>
+</body>
+
+</html>
