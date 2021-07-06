@@ -18,4 +18,4 @@ Kiến thức liên quan:
 2. setTimeout()
 Hàm setTimeout() thường được sử dụng nếu bạn muốn hàm của mình thực thi bao nhiêu mili giây kể từ khi gọi method setTimeout(). Cú pháp chung của method này như sau:
 
-** setTimeout ( expression, timeout ); **
+**setTimeout ( expression, timeout );**
