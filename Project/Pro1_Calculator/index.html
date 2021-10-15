@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Calculator With JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-grid">
+            <div id="result"></div>
+            <div class="calculate">
+                <div class="number">
+                    <button class="btn" value="7">7</button>
+                    <button class="btn" value="8">8</button>
+                    <button class="btn" value="9">9</button>
+                    <button class="btn" value="4">4</button>
+                    <button class="btn" value="5">5</button>
+                    <button class="btn" value="6">6</button>
+                    <button class="btn" value="1">1</button>
+                    <button class="btn" value="2">2</button>
+                    <button class="btn" value="3">3</button>
+                    <button class="btn" value="0">0</button>
+                    <button class="btn" value=".">.</button>
+                </div>
+
+                <div class="operation">
+                    <button class="btn" onclick="undo()">DEL</button>
+                    <button class="btn" onclick="clean()">AC</button>
+                    <button class="btn" value="*">x</button>
+                    <button class="btn" value="/">/</button>
+                    <button class="btn" value="+">+</button>
+                    <button class="btn" value="-">-</button>
+                    <button class="btn" onclick="equal()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
