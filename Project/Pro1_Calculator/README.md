@@ -313,3 +313,92 @@ Code nè:
 
 ### 2.4 Thành quả:
 ![This is a alt text.](https://media.giphy.com/media/tD0CVX8xBcPGxzmv1P/giphy.gif "This is a sample image.")
+
+## 3. Chức Năng Xem Lại Lịch Sử Tính Toán
+### 3.1 Code HTML
+Trong class `.heading` các bạn thêm cho mình một đoạn code nhỏ để chứa icon history và kết quả lưu history.
+```html
+        <div class="heading">
+            <span>
+                <i class="fas fa-history">
+                    <div id="history"></div>
+                </i>
+            </span>
+            ...
+```
+
+### 3.2 Code Javascript
+Mình sẽ sử dụng object và array để làm công đoạn lưu trữ lịch sử tính toán nay, thì chắc các bạn cũng đã hình dung ra được là mình sẽ làm như nào rồi nhờ.
+Mình sẽ nói sơ qua một chút nha, trước hết mình sẽ tạo một array empty để lưu các biểu thức và kết quả tính toán. Sau đó ta chỉ get và render ra view là được rồi, các bạn xem ảnh ở dưới mình có giải thích chi tiết hơn í.
+```js
+    //History
+    const logHistory = document.getElementById('history');  // get element với id được chỉ định
+    let history = [];   // khai báo array empty
+    let expressionData = "" // Khai báo hàm để lưu biểu thức
+    let resultData = "";    // Khai báo hàm để lưu kết quả tính toán
+
+    function equal() {
+        let res = result.innerHTML;
+        let output = eval(res);    
+        expressionData = res;   // Gán biểu thức tính toán vào hàm đã được khai báo
+        resultData = output;    // Gán kết quả tính toán vào hàm đã được khai báo
+
+        // push object gppmf có key là expression, result lần lướt với những value được gán ở trên
+        history.push({ expression: expressionData, result: resultData });
+
+        // Gọi hàm showHistory
+        showHistory();
+        result.innerHTML = output;
+    }
+
+    function showHistory() {
+        let log = "";   // khai báo hàm log
+        for (let key in history) {
+            log += history[key].expression + " = " + history[key].result + "<br>" + "<br>";
+        }
+        logHistory.innerHTML = log;     // Hiển thị ra view với element được gọi
+    }
+```
+
+### 3.3 Code CSS
+Như các bạn đã thấy ở trên khi ta lưu lịch sử thì bị vỡ layout ngay vậy bây giờ chúng ta làm như nào nhờ?
+
+Oke mình đã có bây giờ ta chỉ cần ẩn lịch sử đó đi và chỉ khi nào click vào icon history thì mới hiển thị.
+
+```css
+    /* History */
+    #history {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        background: #5d4196;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: .5rem;
+        margin-top: .5rem;
+    }
+
+    /* hiển thi history */
+    .indexHistory {
+        display: block !important;
+    }
+
+    /* vẫn là hiển thị history nhưng là hover */
+    .fa-history:hover #history{
+        display: block !important;
+    }
+```
+
+### 3.4 Xử dụng js để hiển thị indexHistory
+Dưới đây là code js để khi click vào icon thì sẽ add class để hiển thị lịch sử
+```js
+    // kích để hiển thị History
+    let indexHistory = document.getElementsByClassName("fa-history");
+    indexHistory[0].addEventListener('click', function () {
+        logHistory.classList.toggle("indexHistory");
+    })
+```
+
+### 3.5 Thành quả: 
+![This is a alt text.](https://media.giphy.com/media/i0W3kKMqf0ppktdFrg/giphy.gif "This is a sample image.")

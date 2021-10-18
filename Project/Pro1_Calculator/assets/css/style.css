@@ -127,3 +127,26 @@ label input[type="checkbox"] {
     border-radius: 0;
     background-color: #fff;
 }
+
+/* History */
+#history {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: #5d4196;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .5rem;
+    margin-top: .5rem;
+}
+
+/* hiển thi history */
+.indexHistory {
+    display: block !important;
+}
+
+/* vẫn là hiển thị history nhưng là hover */
+.fa-history:hover #history{
+    display: block !important;
+}
