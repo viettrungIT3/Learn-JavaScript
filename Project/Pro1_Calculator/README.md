@@ -402,3 +402,11 @@ Dưới đây là code js để khi click vào icon thì sẽ add class để hi
 
 ### 3.5 Thành quả: 
 ![This is a alt text.](https://media.giphy.com/media/i0W3kKMqf0ppktdFrg/giphy.gif "This is a sample image.")
+
+# Lời kết
+Vậy là xong bài Xây Dựng Ứng Dụng Calculator Với Javascript. Mình mong muốn bài này sẽ giúp các bạn hiểu, nắm rõ hơn và có cảm giác thú vị hơn khi học js.
+
+Mình cũng là một người không biết gì, nhưng nhờ trang [Thanh Long Dev](https://www.thanhlongdev.com/xay-dung-calculator-with-javascript/) mà mình có thể code được ứng dụng Calculator này.
+Nguồn code: https://github.com/long1211/Calculator-with-JS
+
+Cảm ơn [Thanh Long Dev]() và cảm ơn các bạn đã lướt xem.
